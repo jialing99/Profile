@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Profile</title>
+		<link href="CSS/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans&family=Oswald:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+
+		<script>
+  		// Your web app's Firebase configuration
+  		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  		var firebaseConfig = {
+			apiKey: "AIzaSyDcI-dH0lele9YJMbXlBRfMDxx8QPGeY3A",
+  			authDomain: "twitter-fake-73d39.firebaseapp.com",
+			databaseURL: "https://twitter-fake-73d39.firebaseio.com",
+			projectId: "twitter-fake-73d39",
+			storageBucket: "twitter-fake-73d39.appspot.com",
+			messagingSenderId: "473877653448",
+			appId: "1:473877653448:web:475ea1b362853a51d002fd",
+			measurementId: "G-VY0E3PDBCH"
+		};
+  		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		</script>
+	</head>
+		
+	<body>
+		 <h1 class="TCreate1">Profile</h1>
+		 <hr>
+		 <div id="back">
+		 	<a href="index.html"><h4><img src="arrow_back_ios-white-18dp.svg" class="icon"> Back</h4></a>
+		 </div>
+		 
+		 <div id="container">
+		
+			<div id="login">
+				<h3 class="subtitle">• Login: </h3>
+				<div class="col c50">
+					<p>E-mail: </p><input type="text" id="login-email" placeholder="E-mail">
+				</div>
+				<div class="col c50">
+					<p>Password: </p><input type="password" id="login-pass" placeholder="Password">
+				</div>
+				<div class="col c50">
+					<button id="login-enter">Login</button>
+				</div>
+				<p id="login-message"></p>
+				<p class="acc">Don't have an account? <a href="sign%20up.html">Click Here</a></p>
+			</div>
+			
+			<div id="info">
+	 			<div class="col c100">
+					<h3 class="subtitle">• Profile<div id="username"></div></h3>
+					<h5><div id="bio"></div></h5>
+					
+					<div class="col c50">
+						<button id="logout">Log Out</button>
+					</div>
+				</div>
+			</div>
+			
+			<div id="update-profile">
+				<div class="col c100">
+					<h3>• Options</h3>
+				</div>
+				<div class="col c50">
+					<p>Change username:</p>
+				</div>
+				<div class="col c50">
+					<p>Add a Bio</p>
+				</div>
+				<div class="col c50">
+					<input id="profile-name" placeholder="Update username">
+				</div>
+				<div class="col c50">
+					<textarea id="profile-bio" placeholder="Update Bio"></textarea>
+				</div>
+				<div class="col c100">
+					<button id="update-button">Update Profile</button>
+				</div>
+			 </div>				
+		</div>
+		<script src="js/helpers.js"></script>
+    	<script src="js/auth.js"></script>
+    	<script src="js/profile.js"></script>
+	</body>
+</html>
